@@ -51,6 +51,14 @@ public class XMLNode implements Iterable<XMLNode> {
         return containsKeyAlready;
     }
     
+    public boolean removeParameter(String key) {
+        boolean containedKey = this.parameter.containsKey(key);
+        
+        this.parameter.remove(key);
+        
+        return containedKey;
+    }
+    
     public void setParameterMap(HashMap<String, String> parameter) {
         this.parameter = parameter;
     }
